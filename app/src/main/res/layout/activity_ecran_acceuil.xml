@@ -7,21 +7,70 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context="Vue.EcranAcceuil">
 
-<FrameLayout
-    android:layout_width="409dp"
-    android:layout_height="729dp"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp">
+    <FrameLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:animateLayoutChanges="false"
+        android:background="@drawable/master2"
+        android:fadingEdge="none"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/WelcomeId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bienvenue à Mastermind"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="34sp"
-        android:translationY="50dp" />
-</FrameLayout>
+        <TextView
+            android:id="@+id/WelcomeId"
+            android:layout_width="250dp"
+            android:layout_height="120dp"
+            android:background="#99FFEBEE"
+            android:text="Bienvenue à Mastermind"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textColor="#445FEF"
+            android:textSize="34sp"
+            android:translationX="79.5dp"
+            android:translationY="115dp"></TextView>
+
+        <Button
+            android:id="@+id/btnJouer"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:background="@drawable/btnedge"
+            android:text="@string/jouer"
+            android:textAlignment="textStart"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="34sp"
+            android:translationX="79.5dp"
+            android:translationY="250dp" />
+
+        <Button
+            android:id="@+id/btnParam"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:background="@drawable/btnedge"
+            android:text="@string/param"
+            android:textAlignment="textStart"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="34sp"
+            android:translationX="79.5dp"
+            android:translationY="360dp" />
+
+        <Button
+            android:id="@+id/btnHist"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:background="@drawable/btnedge"
+            android:text="@string/historique"
+            android:textAlignment="textStart"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+            android:textSize="34sp"
+            android:translationX="79.5dp"
+            android:translationY="470dp" />
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
