@@ -1,10 +1,630 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Vue.EcranJeu">
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridLayout
+        android:id="@+id/colorPalette"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:columnCount="4"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:rowCount="2"
+        android:translationX="50dp"
+        android:translationY="25dp">
+
+        <Button
+            android:id="@+id/colorButton1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="4dp"
+            android:background="@drawable/color_button" />
+
+        <Button
+            android:id="@+id/colorButton2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/color_button" />
+
+        <Button
+            android:id="@+id/colorButton3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_margin="4dp"
+            android:background="@drawable/color_button" />
+
+        <Button
+            android:id="@+id/colorButton4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_margin="4dp"
+            android:background="@drawable/color_button" />
+
+        <Button
+            android:id="@+id/colorButton5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="4dp"
+            android:background="@drawable/color_button" />
+
+        <Button
+            android:id="@+id/colorButton6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/color_button" />
+
+        <Button
+            android:id="@+id/colorButton7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_margin="4dp"
+            android:backgroundTint="@drawable/color_button" />
+
+        <Button
+            android:id="@+id/colorButton8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_margin="4dp"
+            android:background="@drawable/color_button" />
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/controlButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="481dp"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:translationX="300dp"
+        android:translationY="45dp">
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/btnedge"
+            android:text="@string/reset" />
+
+        <Button
+            android:id="@+id/verifyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnedge"
+            android:layout_marginTop="5dp"
+            android:text="Verify" />
+
+        <Button
+            android:id="@+id/zoomInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnedge"
+            android:layout_marginTop="5dp"
+            android:text="zoom-" />
+
+        <Button
+            android:id="@+id/zoomOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btnedge"
+            android:text="Zoom" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rowsContainer"
+        android:layout_width="291dp"
+        android:layout_height="451dp"
+        android:layout_above="@+id/colorPalette"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="-23dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:translationY="-8dp">
+
+            <Button
+                android:id="@+id/row1_circle1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/row1_circle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="4dp" />
+
+            <Button
+                android:id="@+id/row1_circle3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="8dp" />
+
+            <Button
+                android:id="@+id/row1_circle4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="12dp" />
+
+            <Button
+                android:id="@+id/feedbackButton1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnedge"
+                android:stateListAnimator="@null"
+                android:text='"?"'
+                android:translationX="16dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:translationY="-8dp">
+
+            <Button
+                android:id="@+id/row2_circle1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/row2_circle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="4dp" />
+
+            <Button
+                android:id="@+id/row2_circle3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="8dp" />
+
+            <Button
+                android:id="@+id/row2_circle4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="12dp" />
+
+            <Button
+                android:id="@+id/feedbackButton2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnedge"
+                android:stateListAnimator="@null"
+                android:translationX="16dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:translationY="-8dp">
+
+            <Button
+                android:id="@+id/row3_circle1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/row3_circle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="4dp" />
+
+            <Button
+                android:id="@+id/row3_circle3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="8dp" />
+
+            <Button
+                android:id="@+id/row3_circle4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="12dp" />
+
+            <Button
+                android:id="@+id/feedbackButton3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnedge"
+                android:stateListAnimator="@null"
+                android:translationX="16dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:translationY="-8dp">
+
+            <Button
+                android:id="@+id/row4_circle1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/row4_circle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="4dp" />
+
+            <Button
+                android:id="@+id/row4_circle3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="8dp" />
+
+            <Button
+                android:id="@+id/row4_circle4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="12dp" />
+
+            <Button
+                android:id="@+id/feedbackButton4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnedge"
+                android:stateListAnimator="@null"
+                android:translationX="16dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:translationY="-8dp">
+            <Button
+                android:id="@+id/row5_circle1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/row5_circle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="4dp" />
+
+            <Button
+                android:id="@+id/row5_circle3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="8dp" />
+
+            <Button
+                android:id="@+id/row5_circle4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="12dp" />
+
+            <Button
+                android:id="@+id/feedbackButton5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnedge"
+                android:stateListAnimator="@null"
+                android:translationX="16dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:translationY="-8dp">
+
+            <Button
+                android:id="@+id/row6_circle1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/row6_circle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="4dp" />
+
+            <Button
+                android:id="@+id/row6_circle3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="8dp" />
+
+            <Button
+                android:id="@+id/row6_circle4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="12dp" />
+
+            <Button
+                android:id="@+id/feedbackButton6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnedge"
+                android:stateListAnimator="@null"
+                android:translationX="16dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:translationY="-8dp">
+
+            <Button
+                android:id="@+id/row7_circle1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/row7_circle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="4dp" />
+
+            <Button
+                android:id="@+id/row7_circle3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="8dp" />
+
+            <Button
+                android:id="@+id/row7_circle4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="12dp" />
+
+            <Button
+                android:id="@+id/feedbackButton7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnedge"
+                android:stateListAnimator="@null"
+                android:translationX="16dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:translationY="-8dp">
+
+            <Button
+                android:id="@+id/row8_circle1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/row8_circle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="4dp" />
+
+            <Button
+                android:id="@+id/row8_circle3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="8dp" />
+
+            <Button
+                android:id="@+id/row8_circle4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="12dp" />
+
+            <Button
+                android:id="@+id/feedbackButton8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnedge"
+                android:stateListAnimator="@null"
+                android:translationX="16dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:translationY="-8dp">
+
+            <Button
+                android:id="@+id/row9_circle1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/row9_circle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="4dp" />
+
+            <Button
+                android:id="@+id/row9_circle3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="8dp" />
+
+            <Button
+                android:id="@+id/row9_circle4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/empty_circle"
+                android:stateListAnimator="@null"
+                android:translationX="12dp" />
+
+            <!-- Feedback Button -->
+            <Button
+                android:id="@+id/feedbackButton9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btnedge"
+                android:stateListAnimator="@null"
+                android:translationX="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/retour"
+        android:background="@drawable/btnedge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retour" />
+</RelativeLayout>

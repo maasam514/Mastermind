@@ -31,7 +31,7 @@ tools:context="Vue.EcranAcceuil">
             android:textColor="#445FEF"
             android:textSize="34sp"
             android:translationX="79.5dp"
-            android:translationY="115dp"></TextView>
+            android:translationY="80dp"></TextView>
 
         <Button
             android:id="@+id/btnJouer"
@@ -44,7 +44,7 @@ tools:context="Vue.EcranAcceuil">
             android:textAppearance="@style/TextAppearance.AppCompat.Display4"
             android:textSize="34sp"
             android:translationX="79.5dp"
-            android:translationY="250dp" />
+            android:translationY="300dp" />
 
         <Button
             android:id="@+id/btnParam"
@@ -57,7 +57,7 @@ tools:context="Vue.EcranAcceuil">
             android:textAppearance="@style/TextAppearance.AppCompat.Display4"
             android:textSize="34sp"
             android:translationX="79.5dp"
-            android:translationY="360dp" />
+            android:translationY="410dp" />
 
         <Button
             android:id="@+id/btnHist"
@@ -70,7 +70,18 @@ tools:context="Vue.EcranAcceuil">
             android:textAppearance="@style/TextAppearance.AppCompat.Display4"
             android:textSize="34sp"
             android:translationX="79.5dp"
-            android:translationY="470dp" />
+            android:translationY="520dp" />
+
+        <EditText
+            android:id="@+id/emailBox"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/saisir_votre_courriel"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#DDCFD7"
+            android:translationX="79.5dp"
+            android:translationY="230dp" />
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

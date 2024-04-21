@@ -3,4 +3,7 @@
     <string name="param">Paramètre</string>
     <string name="historique">Historique</string>
     <string name="jouer">Jouer</string>
+    <string name="saisir_votre_courriel">Saisir Votre courriel...</string>
+    <string name="reset">Reset</string>
+    <string name="retour">retour</string>
 </resources>
